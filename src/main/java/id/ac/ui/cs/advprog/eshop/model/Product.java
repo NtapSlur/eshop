@@ -8,5 +8,5 @@ public class Product
 {
     private String productId;
     private String productName;
-    private int productQuality;
+    private int productQuantity;
 }
