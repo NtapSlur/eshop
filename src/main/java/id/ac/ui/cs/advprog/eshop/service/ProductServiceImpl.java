@@ -37,4 +37,22 @@ public class ProductServiceImpl implements ProductService{
         return status;
     }
 
+    @Override
+    public int findIndexProduct(String productId)
+    {
+        return productRepository.findIndexProduct(productId);
+    }
+
+    @Override
+    public Product findProduct(String productId)
+    {
+        return productRepository.findProduct(productId);
+    }
+
+    @Override
+    public Product updateProduct(Product product)
+    {
+        return productRepository.updateProduct(product);
+    }
+
 }

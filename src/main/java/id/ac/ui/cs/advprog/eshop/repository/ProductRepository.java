@@ -48,4 +48,18 @@ public class ProductRepository
         }
         return -1;
     }
+
+    public Product findProduct(String productId)
+    {
+        int productIndex = findIndexProduct(productId);
+        return productData.get(productIndex);
+    }
+
+    public Product updateProduct(Product product)
+    {
+        Product productUpdate = findProduct(product.getProductId());
+        productUpdate.setProductName(product.getProductName());
+        productUpdate.setProductQuantity(product.getProductQuantity());
+        return productUpdate;
+    }
 }
