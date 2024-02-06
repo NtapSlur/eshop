@@ -9,5 +9,5 @@ public interface ProductService {
     public boolean delete(String productId);
     public int findIndexProduct(String productId);
     public Product findProduct(String productId);
-    public Product updateProduct(Product product);
+    public Product edit(Product product);
 }
