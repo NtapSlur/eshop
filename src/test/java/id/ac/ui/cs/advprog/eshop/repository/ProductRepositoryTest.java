@@ -86,5 +86,20 @@ public class ProductRepositoryTest {
         assertEquals(product.getProductQuantity(), 10);
     }
 
+    @Test
+    void testCreateEditAndDelete()
+    {
+        Product product = createAndSaveProduct("Sampo Cap Bambang","eb558e9f-1c39-460e-8860-71af6af63bd6",100);
+        product.setProductName("Sabun Cap Bambang");
+        product.setProductQuantity(10);
+
+        productRepository.edit(product);
+        assertEquals(product.getProductName(), "Sabun Cap Bambang");
+        assertEquals(product.getProductQuantity(), 10);
+
+        productRepository.delete("eb558e9f-1c39-460e-8860-71af6af63bd6");
+        assertNull(productRepository.findProduct("eb558e9f-1c39-460e-8860-71af6af63bd6"));
+
+    }
 
 }
