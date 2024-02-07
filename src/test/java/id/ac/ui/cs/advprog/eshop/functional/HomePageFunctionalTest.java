@@ -42,7 +42,6 @@ class HomePageFunctionalTest {
         assertEquals("ADV Shop", pageTitle);
     }
 
-
     @Test
     void welcomeMessage_homepage_isCorrect (ChromeDriver driver) throws Exception {
         // Exercise
