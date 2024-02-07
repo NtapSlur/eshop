@@ -52,12 +52,21 @@ public class ProductRepository
     public Product findProduct(String productId)
     {
         int productIndex = findIndexProduct(productId);
+        if (productIndex == -1)
+        {
+            return null;
+        }
         return productData.get(productIndex);
     }
 
-    public Product updateProduct(Product product)
+    public Product edit(Product product)
     {
         Product productUpdate = findProduct(product.getProductId());
+        if (productUpdate == null)
+        {
+            return null;
+        }
+
         productUpdate.setProductName(product.getProductName());
         productUpdate.setProductQuantity(product.getProductQuantity());
         return productUpdate;
