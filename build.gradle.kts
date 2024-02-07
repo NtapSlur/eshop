@@ -45,11 +45,7 @@ tasks.register<Test>("unitTest"){
 	description = "Runs unit tests"
 	group = "verification"
 
-<<<<<<< HEAD
-	filter {
-=======
 	filter{
->>>>>>> e3f1f0b640be467d98b04ca66f10ac0b21568099
 		excludeTestsMatching("*FunctionalTest")
 	}
 }
@@ -58,11 +54,7 @@ tasks.register<Test>("functionalTest"){
 	description = "Runs unit tests"
 	group = "verification"
 
-<<<<<<< HEAD
-	filter {
-=======
 	filter{
->>>>>>> e3f1f0b640be467d98b04ca66f10ac0b21568099
 		includeTestsMatching("*FunctionalTest")
 	}
 }
