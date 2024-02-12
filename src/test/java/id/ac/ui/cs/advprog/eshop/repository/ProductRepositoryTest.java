@@ -69,8 +69,10 @@ public class ProductRepositoryTest {
     void testCreateAndDelete()
     {
         Product product = createAndSaveProduct("Sampo Cap Bambang","eb558e9f-1c39-460e-8860-71af6af63bd6",100);
-
+        Product product2 = createAndSaveProduct("Sabun", "1", 10);
         productRepository.delete("eb558e9f-1c39-460e-8860-71af6af63bd6");
+        productRepository.delete("1");
+        assertNull(productRepository.findProduct("1"));
         assertNull(productRepository.findProduct("eb558e9f-1c39-460e-8860-71af6af63bd6"));
     }
 
@@ -99,7 +101,19 @@ public class ProductRepositoryTest {
 
         productRepository.delete("eb558e9f-1c39-460e-8860-71af6af63bd6");
         assertNull(productRepository.findProduct("eb558e9f-1c39-460e-8860-71af6af63bd6"));
-
     }
 
+    @Test
+    void testNullEdit()
+    {
+        Product product = new Product();
+        assertNull(productRepository.edit(product));
+    }
+
+    @Test
+    void testNullDelete()
+    {
+        Product product = new Product();
+        assertFalse(productRepository.delete(product.getProductId()));
+    }
 }
