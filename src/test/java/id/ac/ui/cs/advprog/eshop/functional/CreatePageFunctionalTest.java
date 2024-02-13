@@ -38,7 +38,7 @@ class CreatePageFunctionalTest {
     }
 
     @Test
-    void listProductTitle_isCorrect (ChromeDriver driver) throws Exception {
+    void listProductTitleIsCorrect (ChromeDriver driver) throws Exception {
         driver.get(baseUrl);
         WebElement buttonListProduct = driver.findElement(By.tagName("a"));
         buttonListProduct.click();
@@ -57,7 +57,7 @@ class CreatePageFunctionalTest {
     }
 
     @Test
-    void createProduct_isCorrect (ChromeDriver driver) throws Exception {
+    void createProductIsCorrect (ChromeDriver driver) throws Exception {
         driver.get(baseUrl);
         WebElement buttonListProduct = driver.findElement(By.tagName("a"));
         buttonListProduct.click();
