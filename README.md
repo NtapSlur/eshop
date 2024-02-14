@@ -22,9 +22,7 @@
    
     Oleh karena itu, saya merename variabel-variabel tersebut sehingga memenuhi kaidah yang seharusnya dan menghilangkan code quality error tersebut.
 
-2. Menurut saya, implementasi yang sudah dilakukan sudah memenuhi definisi CI/CD. Pertama, setiap kali muncul suatu commit yang sudah dipush ke branch yang diinginkan, GitHub akan melakukan Actions terhadap workflow yang terdapat pada branch tersebut, misalnya untuk kasus di module 2 ini adalah PMD dan CI. Khusus untuk branch main, terdapat tambahan workflow lagi yaitu scorecard dan untuk deployment via koyeb. Jika suatu branch di merge ke main, maka GitHub Actions akan memulai workflow lagi yang dimiliki oleh main sehingga setiap terjadi perubahan pada commit akan selalu dicek secara otomatis oleh GitHub Actions. Selain itu, untuk deployment dari web itu sendiri sudah diset agar dapat otomatis redeploy setiap terjadi perubahan pada branch main. Karena sudah banyak proses automation yang terjadi, maka menurut saya definisi CI/CD untuk module 2 ini sudah dipenuhi. 
-
-
+2. Menurut saya, implementasi yang sudah dilakukan sudah memenuhi definisi CI/CD. Pertama, setiap kali muncul suatu commit yang sudah dipush ke branch yang diinginkan, GitHub akan melakukan Actions terhadap workflow yang terdapat pada branch tersebut, misalnya untuk kasus di module 2 ini adalah PMD dan CI. Khusus untuk branch main, terdapat tambahan workflow lagi yaitu scorecard dan untuk deployment via koyeb. Jika suatu branch di merge ke main, maka GitHub Actions akan memulai workflow lagi yang dimiliki oleh main sehingga setiap terjadi perubahan pada commit akan selalu dicek secara otomatis oleh GitHub Actions. Selain itu, untuk deployment dari web itu sendiri sudah diset agar dapat otomatis redeploy setiap terjadi perubahan pada branch main. Karena sudah banyak proses automation yang terjadi, maka menurut saya definisi CI/CD untuk module 2 ini sudah dipenuhi.
 
 # Modul 1
 ## Refleksi 1
