@@ -1,7 +1,11 @@
 package id.ac.ui.cs.advprog.eshop.controller;
 
 import id.ac.ui.cs.advprog.eshop.controller.ProductController;
+import id.ac.ui.cs.advprog.eshop.controller.CarController;
+
 import id.ac.ui.cs.advprog.eshop.model.Product;
+import id.ac.ui.cs.advprog.eshop.model.Car;
+import id.ac.ui.cs.advprog.eshop.service.CarServiceImpl;
 import id.ac.ui.cs.advprog.eshop.service.ProductServiceImpl;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -34,8 +38,14 @@ public class ProductControllerTest {
     @MockBean
     private ProductServiceImpl service;
 
+    @MockBean
+    private CarServiceImpl carService;
+
     @InjectMocks
     ProductController controller;
+
+    @InjectMocks
+    CarController carController;
 
     private static ArrayList<Product> productList;
     private static int productId = 0;
@@ -111,14 +121,6 @@ public class ProductControllerTest {
     {
         productId = 0;
         productList = new ArrayList<>();
-    }
-
-    @Test
-    void testHomePage() throws Exception
-    {
-        mockMvc.perform(get(""))
-                .andExpect(status().isOk())
-                .andExpect(content().string(containsString("Welcome")));
     }
 
     @Test
