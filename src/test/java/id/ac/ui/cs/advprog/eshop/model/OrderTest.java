@@ -1,5 +1,6 @@
 package id.ac.ui.cs.advprog.eshop.model;
 
+import enums.OrderStatus;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -54,8 +55,8 @@ public class OrderTest {
     @Test
     void testOrderCreateOrderSuccessfulStatus(){
         Order order = new Order("13652556-012a-4c07-b546-54eb1396d79b", this.products,
-                1708560000L, "Safira Sudarajat", "SUCCESS");
-        assertEquals("SUCCESS", order.getStatus());
+                1708560000L, "Safira Sudarajat", OrderStatus.SUCCESS.getValue());
+        assertEquals(OrderStatus.SUCCESS.getValue(), order.getStatus());
 
     }
 
