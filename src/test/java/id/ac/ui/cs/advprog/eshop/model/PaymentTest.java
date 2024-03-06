@@ -41,7 +41,7 @@ public class PaymentTest {
         Map<String, String> paymentDataVoucher = new HashMap<>();
         paymentDataVoucher.put("voucherCode", "ESHOP12345678ABC");
 
-        Payment payment1 = new Payment("idPayment", "VOUCHER", paymentDataVoucher, orders.get(0));
+        Payment payment1 = new PaymentVoucher("idPayment", "VOUCHER", paymentDataVoucher, orders.get(0));
         assertSame(this.orders.get(0), payment1.getOrder());
         assertEquals("idPayment", payment1.getId());
         assertEquals("VOUCHER", payment1.getMethod());
@@ -50,8 +50,8 @@ public class PaymentTest {
     @Test
     void testCreatePaymentIsVoucherFail(){
         Map<String, String> paymentDataVoucher = new  HashMap<>();
-        paymentDataVoucher.put("voucherCode", "ESHOP00000000AAA");
-        assertThrows(IllegalArgumentException.class, ()-> {new Payment("aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa","vocer",
+        paymentDataVoucher.put("voucherCode", "00000000AAA");
+        assertThrows(IllegalArgumentException.class, ()-> {new PaymentVoucher("id1","VOUCHER",
                 paymentDataVoucher, orders.get(1));
         });
     }
@@ -60,13 +60,10 @@ public class PaymentTest {
     void testCreatePaymentIsBankFail(){
         Map<String, String> paymentDataBank = new  HashMap<>();
         paymentDataBank.put("bankName", "a");
-        paymentDataBank.put("referenceCode", "0");
-        assertThrows(IllegalArgumentException.class, ()-> {new Payment("aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa","benk",
+        assertThrows(NullPointerException.class, ()-> {new PaymentBank("id1","BANK",
                 paymentDataBank, orders.get(1));
         });
     }
-
-
 
 
 
