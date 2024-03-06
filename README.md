@@ -1,3 +1,8 @@
+# Modul 4
+## Refleksi
+1. Menurut saya prosedur TDD dapat membuat kode yang lebih teorganisir dan aman, karena disini kita membuat test case terlebih dahulu baru kodenya. Hal ini dapat menjamin kebenaran kode karena sudah diperkirakan apa output dari program sehingga jika terdapat sebuah kesalahan dapat langsung terdeteksi.
+2. Menurut saya, test case yang dibuat sudah memenuhi prinsip F.I.R.S.T yang di mana sudah dibuat test yang menguji keseluruhan kode tetapi lebih minimal. Kemudian, tiap unit test juga independen sehingga tidak mempengaruhi hasil tes yang lain. 
+
 # Modul 3
 ## Refleksi
 1. S.O.L.I.D principles yang saya terapkan dalam module ini adalah:
